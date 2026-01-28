@@ -686,8 +686,18 @@ body {
     100% { top: 25px; opacity: 0; }
 }
 
-/* Hide scroll indicator on smaller screens to prevent overlap */
+/* Adjust scroll indicator on smaller screens to prevent overlap but keep visible */
 @media (max-height: 800px) {
+    .scroll-indicator {
+        bottom: 20px;
+    }
+    .mouse {
+        width: 24px;
+        height: 40px;
+    }
+}
+
+@media (max-height: 500px) {
     .scroll-indicator {
         display: none;
     }
@@ -1471,7 +1481,7 @@ body {
     
     .timeline-item-left .timeline-badge,
     .timeline-item-right .timeline-badge {
-        left: 5px;
+        left: -65px;
         right: auto;
     }
     
